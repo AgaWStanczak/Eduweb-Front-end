@@ -1,7 +1,268 @@
-@charset "UTF-8";
-/* CSS Document */
+html{
+	font-family: 'Playfair Display', serif;
+	font-size: 62.5%;
+	color: #48504e;
+	background: #ffc107 url(img/tlo.jpg) fixed no-repeat;
+	background-size: contain; 
+} 
 
-body {
-	margin: 0;
-	padding: 0;
+.orange {
+	color: #ffc107;
+}
+
+.grey {
+	color: #48504e;
+}
+
+.lightgrey {
+	color: #d4d4d3;
+}
+
+h1 {
+	font-size: 3.7rem;
+	background-color: rgba(255, 255, 255, .9);
+	padding: 3.5rem;
+	margin: 4rem;
+	display: inline-block;
+}
+
+h2 {
+	font-size: 2.7rem;	
+}
+
+h3, h2 {
+	color: #fff;
+	background-color: #48504e;
+	padding: 1.5rem;
+	display: inline-block;
+}
+
+h3 {
+	font-size: 3.1rem;
+	position: absolute;
+	right: 0;
+	bottom: 5%;
+}
+
+h4 {
+	font-size: 2rem;
+	padding: 2rem 1rem;
+}
+
+p {
+	font-size: 1.8rem;
+	line-height: 1.55;
+}
+footer p {
+	font-size: 1.4rem;
+	color: #d4d4d3;
+}
+
+.summary {
+	font-size: 2.4rem;
+	font-style: italic;
+}
+
+ul {
+	font-size: 2.3rem;
+	line-height: 1.75;
+}
+
+header {
+	background: #48504e;
+	color: #fff;
+	height: 30rem;
+	padding: 10rem;
+	display: none;
+}
+.hoverme:hover  header {
+	display: block;
+}
+
+nav {
+	float: right;
+}
+
+nav li {
+	text-align: right;
+	background: url('img/strzalka.svg') right no-repeat;
+	padding-right: 4rem;
+	line-height: 1.5rem;
+	margin: 3rem;
+}
+
+.menu {
+	background: #fff url(img/menu.svg) center no-repeat;
+	padding: 1rem;
+	margin: 1rem;
+	height: 3.2rem;
+    width: 3.2rem;
+	position: fixed;
+	right: 0;
+	z-index: 9999;
+}
+
+strong {
+	font-weight: bold;
+}
+
+em {
+	background-color: rgba(255, 255, 255, .8);
+}
+
+.dot {
+	width: 1rem;
+	height: 1rem;
+	background-color: #48504e;
+	margin: 3rem auto;
+	border-radius: 2rem;
+}
+
+.del {
+	text-decoration: line-through;
+}
+
+.buttonMore {
+	display: inline-block;
+	border: 1px dashed #000;
+	font-size: 3rem;
+	padding: 1rem 1.5rem;
+	text-decoration: none;
+	position: absolute;
+	right: 0;
+}
+
+section {
+	position: absolute;
+	right: 5%;
+	width: 50%;
+	min-width: 600px;
+	max-width: 850px;
+}
+
+article {
+	margin-bottom: 6rem;
+}
+
+hgroup {
+	margin-left: -200px;
+	position: relative;
+	display: inline-block;
+}
+
+figure {
+	margin-left: -25%;
+	float: left;
+	margin-top: 20%;
+}
+
+.text {
+	padding-top: 4rem;
+	column-count: 2;
+}
+
+footer {
+	position:fixed;
+	bottom: 0;
+	right: 0;
+	padding: 1rem;
+	background: #fff;
+	z-index: 6;
+}
+
+/*------------------------------------*\
+    BORDERS
+\*------------------------------------*/
+
+/* Create a series of empty pseudo-elements... */
+html:before,html:after,body:before,body:after{
+    content:"";
+    background: #fff;
+    position:fixed;
+    display:block;
+    z-index:5;
+}
+
+/* ...and position them! */
+html:before{
+    height:15px;
+    left:0;
+    right:0;
+    top:0;
+}
+html:after{
+    width:15px;
+    top:0;
+    right:0;
+    bottom:0;
+}
+body:before{
+    height:15px;
+    right:0;
+    bottom:0;
+    left:0;
+}
+body:after{
+    width:15px;
+    top:0;
+    bottom:0;
+    left:0;
+}
+
+@media all and (max-width: 768px) {
+	html {
+		background: #ffc107;
+	}
+	
+	section {
+		width: 75%;
+	}
+}
+
+@media all and (max-width: 1280px) {
+	hgroup {
+		margin-left: 0;
+	}
+	
+	figure {
+		display: none;
+	}
+	
+	section {
+	position: absolute;
+	right: 5%;
+	width: 90%;
+	min-width: 300px;
+}
+	
+	.text {
+		column-count: 1;
+	}
+}
+
+form {
+	float: left;
+	width: 35rem;
+}	
+
+input, textarea {
+	width: 35rem;
+	background: none;
+	border: 2px #d4d4d3 solid;
+	margin: .5rem;
+	madding: 1rem;
+	color:#fff;
+	font-size: 1.7rem;
+}
+	
+button {
+	background: #ffc107;
+	border: none;
+	padding: 2rem 6rem;
+	font-size: 1.5rem;
+	font-weight: bold;
+	float: right;
+	cursor: pointer;
+	margin-top: 1.5rem;
+	margin-right: -3rem;
 }
