@@ -16,7 +16,7 @@ var button = createButton();
 	
 	function animateScroll() {
 		
-		if(document.body.scrollTop > 0) {
+		if(document.documentElement.scrollTop > 0) {
 			window.scrollBy(0, -5);
 			setTimeout(animateScroll, 10);
 		}
@@ -29,8 +29,8 @@ var button = createButton();
 		
 	}, false);
 	
-	window.addEventListener("scroll", function(e) {
-		if(document.body.scrollTop >= 100) {
+	window.addEventListener("scroll", function() {
+		if(document.documentElement.scrollTop >= 100) {
 			button.classList.remove("hidden");
 		} else {
 			button.classList.add("hidden");
